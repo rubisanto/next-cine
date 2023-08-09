@@ -1,28 +1,34 @@
 //importer le css depuis le fichier Header.css
+import Link from "next/link";
 import "./Header.css";
 
-export const Header = () => {
+export default function Header() {
   return (
     <div>
       <nav className="nav">
-        <a href="/" className="site-title">
+        <Link href="/" className="site-title">
           Next Cine
-        </a>
+        </Link>
         <ul>
           <li>
-            <a href="/catalogue">Catalogue</a>
+            <Link href="/catalogue">Catalogue</Link>
           </li>
           <li>
-            <a href="/about">À propos</a>
+            <Link href="/about">A propos</Link>
           </li>
           <li>
             <a href="/forum">Forum</a>
           </li>
           <li>
-            <a href="/signin">Se connecter</a>
+            <Link href="/blog">Blog</Link>
+          </li>
+          <li>
+            <Link href="/sign-in" className="sign-in">
+              Se connecter
+            </Link>
           </li>
         </ul>
       </nav>
     </div>
   );
-};
+}
